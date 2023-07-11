@@ -20,6 +20,7 @@ class MobileScrapSpider(scrapy.Spider):
             processor = mobiles.xpath('.//ul[@class="_1xgFaf"]/li[4]/text()').get()
             warranty = mobiles.xpath('.//ul[@class="_1xgFaf"]/li[5]/text()').get()
             ratting = mobiles.xpath('//div[@class="_3LWZlK"]/text()').get()
+            image = mobiles.xpath('//img[@loading="eager"]/@src').get()
             
             yield {
                 "Product_name":product_name,
@@ -30,6 +31,7 @@ class MobileScrapSpider(scrapy.Spider):
                 "Processor":processor,
                 "Warranty":warranty,
                 "Ratting":ratting,
+                "Product_Image_Url": image
                
             } 
 
