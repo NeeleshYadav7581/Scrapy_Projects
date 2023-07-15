@@ -5,7 +5,7 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 
 client = MongoClient(
-    'mongodb+srv://Neelesh_yadav:Mongo%407581@cluster01.qi0w1zy.mongodb.net/')
+    'Db URI')
 db = client['Imdb_movies_rating']
 collection = db['Top_movies']
 
